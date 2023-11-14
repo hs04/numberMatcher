@@ -1,3 +1,4 @@
+import os
 from kivy.app import App
 from kivy.uix.boxlayout import BoxLayout
 from kivy.uix.button import Button
@@ -6,7 +7,8 @@ from kivy.uix.label import Label
 import firebase_admin
 from firebase_admin import credentials,db
 
-cred = credentials.Certificate(r'C:\Users\a0491053\Downloads\testing-project-1-42371-firebase-adminsdk-dgxww-d3de4a33b9.json')
+json_path = os.path.join(os.path.dirname(os.path.abspath(__file__)),'testing-project-1-42371-firebase-adminsdk-dgxww-d3de4a33b9.json')
+cred = credentials.Certificate(json_path)
 firebase_admin.initialize_app(cred,{'databaseURL': 'https://testing-project-1-42371-default-rtdb.asia-southeast1.firebasedatabase.app/'})
 ref = db.reference('/user_data')
 
