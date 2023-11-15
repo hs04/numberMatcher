@@ -62,7 +62,7 @@ class MyApp(App):
 
         proximity_string = ''
         for i in top_3_users:
-                proximity_string += '\nName of Person : '+i['Name']+' ; Distance from your input number : '+str("%.3f"%i['proximity'])
+                proximity_string += '\nPerson: '+i['Name']+' ; Distance: '+str("%.3f"%i['proximity'])
         
         self.result_label.text = "Hi "+user_name+", here are the top 3 people closest to you :"+proximity_string
 
