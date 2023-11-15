@@ -22,12 +22,13 @@ class MyApp(App):
         
         
         self.result_label = Label(text='', halign='left', valign='top', markup=True)
-
+        self.info_label = Label(text='Assume the world is a liner place', halign='left', valign='top', markup=True,font_size=16)
+        
         self.layout.add_widget(self.name_input)
         self.layout.add_widget(self.number_input)
         self.layout.add_widget(submit_button)
         self.layout.add_widget(self.result_label)
-        
+        self.layout.add_widget(self.info_label)
         
         return self.layout
 
